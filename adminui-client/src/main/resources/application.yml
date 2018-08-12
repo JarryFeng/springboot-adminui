@@ -1,0 +1,20 @@
+#将监控服务注册到监控中心
+spring:
+  application:
+    name: adminui-client
+
+  boot:
+      admin:
+        client:
+          url: http://localhost:8080
+
+#将所有监控接口的监控权限开发出去
+management:
+   endpoints:
+     web:
+       exposure:
+         include: "*"
+
+server:
+   port: 8081
+
